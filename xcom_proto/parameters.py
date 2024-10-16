@@ -230,6 +230,10 @@ class Dataset:
     VS_PV_PROD = Datapoint(15017, "VS_PV_PROD", TYPE_FLOAT, "kWh")
     VS_PV_ENERGY_PREV_DAY = Datapoint(15027, "VS_PV_ENERGY_PREV_DAY", TYPE_FLOAT, "kWh")
 
+    # misc parameters
+    AUX1_ACTIVATED_BELOW_SOC = Datapoint(1440, "AUX1_ACTIVATED_BELOW_SOC", TYPE_FLOAT, "% SOC")
+    AUX1_DEACTIVATED_OVER_SOC = Datapoint(1441, "AUX1_DEACTIVATED_BELOW_SOC", TYPE_FLOAT, "% SOC")
+
     @staticmethod
     def getParamByID(id: int) -> Datapoint:
         for point in Dataset._getDatapoints():
